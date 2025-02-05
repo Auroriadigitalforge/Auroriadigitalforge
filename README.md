@@ -5,7 +5,7 @@
 - 📫 How to reach me? You can mail me on auroriadigitalforge@gmail.com
 - 😄 Pronouns: ...
 - ⚡ Fun fact: I learn and teach programming
--    Instagram I'D : https://www.instagram.com/auroria_digital_forge/
+-    Instagram I'D : https://www.instagram.com/auroria_programming_hub/
 -    follw on instagram
 
 <!---
