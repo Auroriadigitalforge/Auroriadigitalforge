@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @Auroriadigitalforge
+- 👋 Hi, I’m Abhay Bhatt, Owner of @Auroriadigitalforge
 - 👀 I’m interested in progarmming
 - 🌱 I’m currently learning computer engineering 
 - 💞️ I’m looking to collaborate on 
