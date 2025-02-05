@@ -3,10 +3,10 @@
 - 🌱 I’m currently learning computer engineering 
 - 💞️ I’m looking to collaborate on 
 - 📫 How to reach me? You can mail me on auroriadigitalforge@gmail.com
-- 😄 Pronouns: ...
+- 😄 Pronouns: Abhay Bhatt
 - ⚡ Fun fact: I learn and teach programming
 -    Instagram I'D : https://www.instagram.com/auroria_programming_hub/
--    follw on instagram
+-    follw us on instagram
 
 <!---
 Auroriadigitalforge/Auroriadigitalforge is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
