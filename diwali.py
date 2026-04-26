@@ -71,6 +71,8 @@ class Particle(pygame.sprite.Sprite):
         self.pos += self.vel
         # Decrease lifetime (fade effect)
         self.lifetime -= 1
+        if self.lifetime <= 0:
+            self.kill()
     
     def draw(self, screen):
         # Calculate alpha based on remaining lifetime for fade effect
@@ -264,19 +266,13 @@ def draw_environment(screen):
         draw_diya(screen, x, y)
 
 
-def draw_text(screen):
-    # Sliding animated text: we'll animate its Y position via a global
-    global text_target_y, text_current_y
-    if 'text_target_y' not in globals():
-        text_target_y = HEIGHT // 8
-        text_current_y = HEIGHT + 50  # start below the screen
-
-    # ease the text upward
-    text_current_y -= (text_current_y - text_target_y) * 0.035
+def draw_text(screen, text_state):
+    # Ease the text upward toward its target y position
+    text_state['current_y'] -= (text_state['current_y'] - text_state['target_y']) * 0.035
 
     # Render the main message
     text_surface = FONT_LARGE.render("Happy Diwali!", True, WHITE)
-    text_rect = text_surface.get_rect(center=(WIDTH // 2, int(text_current_y)))
+    text_rect = text_surface.get_rect(center=(WIDTH // 2, int(text_state['current_y'])))
 
     # Shadow effect
     shadow_color = (100, 100, 100)
@@ -313,6 +309,9 @@ def run_game():
 
     # Initialize star field for parallax background
     stars = [Star() for _ in range(90)]
+
+    # State for the sliding "Happy Diwali!" text animation
+    text_state = {'target_y': HEIGHT // 8, 'current_y': HEIGHT + 50}
 
     # Timer for spawning new fireworks
     last_firework_time = pygame.time.get_ticks()
@@ -384,7 +383,7 @@ def run_game():
         for r in round_crackers:
             r.draw(SCREEN)
 
-        draw_text(SCREEN)
+        draw_text(SCREEN, text_state)
 
         # Update the full display
         pygame.display.flip()
